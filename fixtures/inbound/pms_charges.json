@@ -1,0 +1,86 @@
+[
+  {
+    "id": "pc-1",
+    "day_offset": -6,
+    "reservation_ref": "AUR-20101",
+    "guest_name": "Guest One",
+    "guest_email": "guest1@example.com",
+    "amount_eur": 320.0,
+    "method": "card",
+    "channel": "direct",
+    "room": "101",
+    "card_last4": "4417"
+  },
+  {
+    "id": "pc-2",
+    "day_offset": -6,
+    "reservation_ref": "AUR-20102",
+    "guest_name": "Guest Two",
+    "guest_email": "guest2@example.com",
+    "amount_eur": 540.0,
+    "method": "card",
+    "channel": "direct",
+    "room": "102",
+    "card_last4": "7788"
+  },
+  {
+    "id": "pc-3",
+    "day_offset": -3,
+    "reservation_ref": "AUR-20138",
+    "guest_name": "Guest Three",
+    "guest_email": "guest3@example.com",
+    "amount_eur": 2924.0,
+    "method": "card",
+    "channel": "corporate",
+    "room": "210",
+    "card_last4": "9931"
+  },
+  {
+    "id": "pc-4",
+    "day_offset": -3,
+    "reservation_ref": "AUR-20140",
+    "guest_name": "Guest Four",
+    "guest_email": "guest8@example.com",
+    "amount_eur": 630.0,
+    "method": "card",
+    "channel": "direct",
+    "room": "212",
+    "card_last4": "9012"
+  },
+  {
+    "id": "pc-5",
+    "day_offset": -2,
+    "reservation_ref": "AUR-20155",
+    "guest_name": "Guest Nine",
+    "guest_email": "guest9@example.com",
+    "amount_eur": 452.1,
+    "method": "card",
+    "channel": "ota",
+    "room": "305",
+    "card_last4": "3344"
+  },
+  {
+    "id": "pc-6",
+    "day_offset": -4,
+    "reservation_ref": "AUR-20170",
+    "guest_name": "Guest Ten",
+    "guest_email": "guest10@example.com",
+    "amount_eur": 95.0,
+    "method": "cash",
+    "channel": "direct",
+    "room": "108",
+    "card_last4": ""
+  },
+  {
+    "id": "pc-7",
+    "day_offset": 0,
+    "reservation_ref": "AUR-20190",
+    "guest_name": "Guest Eleven",
+    "guest_email": "guest11@example.com",
+    "amount_eur": 410.0,
+    "method": "card",
+    "channel": "direct",
+    "room": "402",
+    "card_last4": "1122"
+  }
+]

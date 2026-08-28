@@ -1,0 +1,65 @@
+[
+  {
+    "id": "bank-1",
+    "day_offset": -6,
+    "description": "Monthly account fee",
+    "reference": "",
+    "amount_eur": -12.0,
+    "balance_eur": 41988.0,
+    "kind": "bank_fee"
+  },
+  {
+    "id": "bank-2",
+    "day_offset": -5,
+    "description": "Stripe payout",
+    "reference": "PO-1001",
+    "amount_eur": 1359.4,
+    "balance_eur": 43347.4,
+    "kind": "payout"
+  },
+  {
+    "id": "bank-3",
+    "day_offset": -5,
+    "description": "Supplier invoice payment - linens",
+    "reference": "",
+    "amount_eur": -640.0,
+    "balance_eur": 42707.4,
+    "kind": "payable"
+  },
+  {
+    "id": "bank-4",
+    "day_offset": -2,
+    "description": "Stripe payout",
+    "reference": "PO-1002",
+    "amount_eur": 3868.46,
+    "balance_eur": 46575.86,
+    "kind": "payout"
+  },
+  {
+    "id": "bank-5",
+    "day_offset": -2,
+    "description": "TRF REF NOT AVAILABLE - INCOMING",
+    "reference": "",
+    "amount_eur": 1150.0,
+    "balance_eur": 47725.86,
+    "kind": "credit"
+  },
+  {
+    "id": "bank-6",
+    "day_offset": -1,
+    "description": "Chargeback AUR-20166 disputed",
+    "reference": "dp_9001",
+    "amount_eur": -275.0,
+    "balance_eur": 47450.86,
+    "kind": "chargeback"
+  },
+  {
+    "id": "bank-7",
+    "day_offset": -1,
+    "description": "Utility company direct debit",
+    "reference": "",
+    "amount_eur": -215.5,
+    "balance_eur": 47235.36,
+    "kind": "payable"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "item-burger",
+    "item": "Aurora Burger",
+    "venue": "Salt Restaurant",
+    "price": 16.5
+  },
+  {
+    "id": "item-wine",
+    "item": "House Wine, glass",
+    "venue": "Salt Restaurant",
+    "price": 8.0
+  },
+  {
+    "id": "item-cocktail",
+    "item": "Signature Cocktail",
+    "venue": "Salt Restaurant",
+    "price": 12.0
+  },
+  {
+    "id": "item-coffee",
+    "item": "Coffee",
+    "venue": "Salt Restaurant",
+    "price": 3.5
+  },
+  {
+    "id": "item-salad",
+    "item": "Seasonal Salad",
+    "venue": "Salt Restaurant",
+    "price": 11.0
+  }
+]

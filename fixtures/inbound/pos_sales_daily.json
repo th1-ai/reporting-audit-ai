@@ -1,0 +1,492 @@
+[
+  {
+    "date": "2026-07-30",
+    "item_id": "item-burger",
+    "units": 138,
+    "revenue": 2277.0,
+    "covers": 194
+  },
+  {
+    "date": "2026-07-30",
+    "item_id": "item-wine",
+    "units": 91,
+    "revenue": 728.0,
+    "covers": 194
+  },
+  {
+    "date": "2026-07-30",
+    "item_id": "item-cocktail",
+    "units": 75,
+    "revenue": 900.0,
+    "covers": 194
+  },
+  {
+    "date": "2026-07-30",
+    "item_id": "item-coffee",
+    "units": 99,
+    "revenue": 346.5,
+    "covers": 194
+  },
+  {
+    "date": "2026-07-30",
+    "item_id": "item-salad",
+    "units": 77,
+    "revenue": 847.0,
+    "covers": 194
+  },
+  {
+    "date": "2026-07-31",
+    "item_id": "item-burger",
+    "units": 183,
+    "revenue": 3019.5,
+    "covers": 249
+  },
+  {
+    "date": "2026-07-31",
+    "item_id": "item-wine",
+    "units": 113,
+    "revenue": 904.0,
+    "covers": 249
+  },
+  {
+    "date": "2026-07-31",
+    "item_id": "item-cocktail",
+    "units": 88,
+    "revenue": 1056.0,
+    "covers": 249
+  },
+  {
+    "date": "2026-07-31",
+    "item_id": "item-coffee",
+    "units": 124,
+    "revenue": 434.0,
+    "covers": 249
+  },
+  {
+    "date": "2026-07-31",
+    "item_id": "item-salad",
+    "units": 113,
+    "revenue": 1243.0,
+    "covers": 249
+  },
+  {
+    "date": "2026-08-01",
+    "item_id": "item-burger",
+    "units": 150,
+    "revenue": 2475.0,
+    "covers": 183
+  },
+  {
+    "date": "2026-08-01",
+    "item_id": "item-wine",
+    "units": 100,
+    "revenue": 800.0,
+    "covers": 183
+  },
+  {
+    "date": "2026-08-01",
+    "item_id": "item-cocktail",
+    "units": 71,
+    "revenue": 852.0,
+    "covers": 183
+  },
+  {
+    "date": "2026-08-01",
+    "item_id": "item-coffee",
+    "units": 95,
+    "revenue": 332.5,
+    "covers": 183
+  },
+  {
+    "date": "2026-08-01",
+    "item_id": "item-salad",
+    "units": 63,
+    "revenue": 693.0,
+    "covers": 183
+  },
+  {
+    "date": "2026-08-02",
+    "item_id": "item-burger",
+    "units": 156,
+    "revenue": 2574.0,
+    "covers": 215
+  },
+  {
+    "date": "2026-08-02",
+    "item_id": "item-wine",
+    "units": 122,
+    "revenue": 976.0,
+    "covers": 215
+  },
+  {
+    "date": "2026-08-02",
+    "item_id": "item-cocktail",
+    "units": 90,
+    "revenue": 1080.0,
+    "covers": 215
+  },
+  {
+    "date": "2026-08-02",
+    "item_id": "item-coffee",
+    "units": 112,
+    "revenue": 392.0,
+    "covers": 215
+  },
+  {
+    "date": "2026-08-02",
+    "item_id": "item-salad",
+    "units": 96,
+    "revenue": 1056.0,
+    "covers": 215
+  },
+  {
+    "date": "2026-08-03",
+    "item_id": "item-burger",
+    "units": 159,
+    "revenue": 2623.5,
+    "covers": 199
+  },
+  {
+    "date": "2026-08-03",
+    "item_id": "item-wine",
+    "units": 93,
+    "revenue": 744.0,
+    "covers": 199
+  },
+  {
+    "date": "2026-08-03",
+    "item_id": "item-cocktail",
+    "units": 74,
+    "revenue": 888.0,
+    "covers": 199
+  },
+  {
+    "date": "2026-08-03",
+    "item_id": "item-coffee",
+    "units": 98,
+    "revenue": 343.0,
+    "covers": 199
+  },
+  {
+    "date": "2026-08-03",
+    "item_id": "item-salad",
+    "units": 79,
+    "revenue": 869.0,
+    "covers": 199
+  },
+  {
+    "date": "2026-08-04",
+    "item_id": "item-burger",
+    "units": 187,
+    "revenue": 3085.5,
+    "covers": 224
+  },
+  {
+    "date": "2026-08-04",
+    "item_id": "item-wine",
+    "units": 123,
+    "revenue": 984.0,
+    "covers": 224
+  },
+  {
+    "date": "2026-08-04",
+    "item_id": "item-cocktail",
+    "units": 89,
+    "revenue": 1068.0,
+    "covers": 224
+  },
+  {
+    "date": "2026-08-04",
+    "item_id": "item-coffee",
+    "units": 129,
+    "revenue": 451.5,
+    "covers": 224
+  },
+  {
+    "date": "2026-08-04",
+    "item_id": "item-salad",
+    "units": 60,
+    "revenue": 660.0,
+    "covers": 224
+  },
+  {
+    "date": "2026-08-05",
+    "item_id": "item-burger",
+    "units": 163,
+    "revenue": 2689.5,
+    "covers": 228
+  },
+  {
+    "date": "2026-08-05",
+    "item_id": "item-wine",
+    "units": 117,
+    "revenue": 936.0,
+    "covers": 228
+  },
+  {
+    "date": "2026-08-05",
+    "item_id": "item-cocktail",
+    "units": 92,
+    "revenue": 1104.0,
+    "covers": 228
+  },
+  {
+    "date": "2026-08-05",
+    "item_id": "item-coffee",
+    "units": 110,
+    "revenue": 385.0,
+    "covers": 228
+  },
+  {
+    "date": "2026-08-05",
+    "item_id": "item-salad",
+    "units": 86,
+    "revenue": 946.0,
+    "covers": 228
+  },
+  {
+    "date": "2026-08-06",
+    "item_id": "item-burger",
+    "units": 148,
+    "revenue": 2442.0,
+    "covers": 204
+  },
+  {
+    "date": "2026-08-06",
+    "item_id": "item-wine",
+    "units": 102,
+    "revenue": 816.0,
+    "covers": 204
+  },
+  {
+    "date": "2026-08-06",
+    "item_id": "item-cocktail",
+    "units": 78,
+    "revenue": 936.0,
+    "covers": 204
+  },
+  {
+    "date": "2026-08-06",
+    "item_id": "item-coffee",
+    "units": 99,
+    "revenue": 346.5,
+    "covers": 204
+  },
+  {
+    "date": "2026-08-06",
+    "item_id": "item-salad",
+    "units": 114,
+    "revenue": 1254.0,
+    "covers": 204
+  },
+  {
+    "date": "2026-08-07",
+    "item_id": "item-burger",
+    "units": 165,
+    "revenue": 2722.5,
+    "covers": 209
+  },
+  {
+    "date": "2026-08-07",
+    "item_id": "item-wine",
+    "units": 112,
+    "revenue": 896.0,
+    "covers": 209
+  },
+  {
+    "date": "2026-08-07",
+    "item_id": "item-cocktail",
+    "units": 90,
+    "revenue": 1080.0,
+    "covers": 209
+  },
+  {
+    "date": "2026-08-07",
+    "item_id": "item-coffee",
+    "units": 105,
+    "revenue": 367.5,
+    "covers": 209
+  },
+  {
+    "date": "2026-08-07",
+    "item_id": "item-salad",
+    "units": 91,
+    "revenue": 1001.0,
+    "covers": 209
+  },
+  {
+    "date": "2026-08-08",
+    "item_id": "item-burger",
+    "units": 162,
+    "revenue": 2673.0,
+    "covers": 225
+  },
+  {
+    "date": "2026-08-08",
+    "item_id": "item-wine",
+    "units": 124,
+    "revenue": 992.0,
+    "covers": 225
+  },
+  {
+    "date": "2026-08-08",
+    "item_id": "item-cocktail",
+    "units": 88,
+    "revenue": 1056.0,
+    "covers": 225
+  },
+  {
+    "date": "2026-08-08",
+    "item_id": "item-coffee",
+    "units": 116,
+    "revenue": 406.0,
+    "covers": 225
+  },
+  {
+    "date": "2026-08-08",
+    "item_id": "item-salad",
+    "units": 78,
+    "revenue": 858.0,
+    "covers": 225
+  },
+  {
+    "date": "2026-08-09",
+    "item_id": "item-burger",
+    "units": 149,
+    "revenue": 2458.5,
+    "covers": 201
+  },
+  {
+    "date": "2026-08-09",
+    "item_id": "item-wine",
+    "units": 104,
+    "revenue": 832.0,
+    "covers": 201
+  },
+  {
+    "date": "2026-08-09",
+    "item_id": "item-cocktail",
+    "units": 75,
+    "revenue": 900.0,
+    "covers": 201
+  },
+  {
+    "date": "2026-08-09",
+    "item_id": "item-coffee",
+    "units": 114,
+    "revenue": 399.0,
+    "covers": 201
+  },
+  {
+    "date": "2026-08-09",
+    "item_id": "item-salad",
+    "units": 82,
+    "revenue": 902.0,
+    "covers": 201
+  },
+  {
+    "date": "2026-08-10",
+    "item_id": "item-burger",
+    "units": 177,
+    "revenue": 2920.5,
+    "covers": 208
+  },
+  {
+    "date": "2026-08-10",
+    "item_id": "item-wine",
+    "units": 116,
+    "revenue": 928.0,
+    "covers": 208
+  },
+  {
+    "date": "2026-08-10",
+    "item_id": "item-cocktail",
+    "units": 78,
+    "revenue": 936.0,
+    "covers": 208
+  },
+  {
+    "date": "2026-08-10",
+    "item_id": "item-coffee",
+    "units": 100,
+    "revenue": 350.0,
+    "covers": 208
+  },
+  {
+    "date": "2026-08-10",
+    "item_id": "item-salad",
+    "units": 80,
+    "revenue": 880.0,
+    "covers": 208
+  },
+  {
+    "date": "2026-08-11",
+    "item_id": "item-burger",
+    "units": 93,
+    "revenue": 1534.5,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-11",
+    "item_id": "item-wine",
+    "units": 58,
+    "revenue": 464.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-11",
+    "item_id": "item-cocktail",
+    "units": 51,
+    "revenue": 612.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-11",
+    "item_id": "item-coffee",
+    "units": 64,
+    "revenue": 224.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-11",
+    "item_id": "item-salad",
+    "units": 49,
+    "revenue": 539.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-12",
+    "item_id": "item-burger",
+    "units": 167,
+    "revenue": 2755.5,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-12",
+    "item_id": "item-wine",
+    "units": 120,
+    "revenue": 960.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-12",
+    "item_id": "item-cocktail",
+    "units": 86,
+    "revenue": 1032.0,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-12",
+    "item_id": "item-coffee",
+    "units": 103,
+    "revenue": 360.5,
+    "covers": 220
+  },
+  {
+    "date": "2026-08-12",
+    "item_id": "item-salad",
+    "units": 80,
+    "revenue": 880.0,
+    "covers": 220
+  }
+]

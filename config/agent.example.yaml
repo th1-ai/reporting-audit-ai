@@ -1,0 +1,107 @@
+# ---------------------------------------------------------------------------
+# agent.yaml - Reporting & Audit AI's own knobs, on top of config/hotel.yaml.
+#
+# `make setup` copies this to config/agent.yaml. Edit that one.
+# ---------------------------------------------------------------------------
+
+# Which of pms/email/messaging this agent actually reads from - none of
+# them: the three jobs read bulk CSV exports (financial_daily/bank_statement/
+# stripe_payments/pms_charges/pos_sales_daily), never `core/adapters`. PMS is
+# write-only here (`add_note` on reconciliation) and email is send-only (the
+# owner report / F&B digest); see docs/integrations.md "What this agent
+# actually reads and writes". Keeps `make run`'s SAMPLE DATA warning from
+# naming systems it never reads from when they are left as `mock`. See
+# core/adapters/__init__.py:_systems_used.
+systems_used: []
+
+# Sub-agents folded into this repo. Off by default: the Weekly Report and the
+# Weekly Income Audit are useful on their own for any hotel with a restaurant
+# or not. Turn the Pit Boss on once you have a POS export to feed it.
+subagents:
+  fnb_sales_audit:
+    enabled: false
+    # daily till audit per outlet, voids/comps/discounts vs a rolling baseline
+    # see workflows/20-fnb-sales-audit.md and docs/sub-agents.md
+
+# --- Weekly Owner Report -----------------------------------------------------
+report:
+  recipients: []              # emails that get the Monday report; falls back
+                               # to contacts.manager.email in hotel.yaml
+  min_history_days: 7         # below this the report refuses and tells you why
+  web_traffic_csv: "data/imports/web_traffic.csv"   # optional; date,sessions,users
+
+# --- Weekly Income Audit (three-way reconciliation) --------------------------
+recon:
+  window_days: 7               # rolling window; see docs/how-it-works.md #1
+  tolerance_eur: 5              # FX / rounding tolerance in euros
+  tolerance_pct: 0.5             # ... or percent, whichever the amount uses
+  settlement_days: 2            # T+2 - takings not yet in the bank are "pending", not missing
+  gl_fx: "7620"                  # ledger account an FX action posts to
+  gl_fees: "6420"                # ledger account payout fees are coded to
+  duplicate_window_minutes: 15   # second charge within this window = suspected duplicate
+  near_miss_eur: 50              # window used to name near-misses on an unmatched credit
+  rules:
+    recon-fuzzy-identity: true    # match folio<->payment on card when the email differs
+    recon-tolerance: true         # apply the FX/rounding tolerance above
+    recon-ota-virtual: true       # expect no Stripe row for cash / OTA virtual cards
+    recon-settlement-window: true # allow settlement_days before calling takings "missing"
+
+# --- F&B Sales Audit (Pit Boss) ----------------------------------------------
+fnb_audit:
+  outlets: []                    # [{name: "Salt Restaurant", manager_email: "..."}]
+  shifts:
+    - {name: "Lunch",  share: 0.34, void_rate: 0.048, window: "12:00-15:30"}
+    - {name: "Dinner", share: 0.46, void_rate: 0.040, window: "18:30-22:00"}
+    - {name: "Late",   share: 0.20, void_rate: 0.055, window: "22:00-close"}
+  shortfall_floor: 3             # items of shortfall treated as ordinary noise
+  shortfall_weight: 6            # multiplier attributing shortfall to the late shift
+  comp_rate: 0.012               # comps as a share of covers
+  discount_rate: 0.06            # discounts as a share of shift revenue
+  flag_sigma: 2                  # standard deviations above baseline to flag (medium)
+  escalate_sigma: 3              # standard deviations above baseline to flag high
+  rules:
+    pos-void-watch: true          # off = no baseline comparison, nothing flagged
+
+# What needs a human before it leaves the building. Owner report and F&B
+# digest emails are on the base list already (send_email); nothing here needs
+# to add to it unless you also enable a messaging channel for the digest.
+review:
+  require_approval_for:
+    - send_email
+    - send_message
+    - pms_write
+    - payment
+    - publish
+  auto_approve_after_days: null
+  digest_hour: 8
+
+# How the report and digest are allowed to leave once mode is live.
+# draft: always queue for a human, however confident the run was.
+# send:  send automatically when nothing gated it. Off by default everywhere.
+autonomy:
+  owner_report: draft
+  fnb_digest: draft
+
+llm:
+  # Overrides hotel.yaml's llm: block for this agent only. The only call made
+  # is the controller's note (prompts/finance-note.md) - cosmetic, never
+  # gates a decision, and the run completes even if this call fails.
+  provider: interactive
+  effort: low
+
+# Every recurring job this agent has, one entry each. `make schedule` prints
+# the snippet for the first entry; `make schedule ARGS="--all"` prints one
+# snippet per entry, each with its own command and cadence - see
+# scheduler/crontab.example for exactly what that command produces.
+schedule:
+  owner_report:
+    cadence: weekly
+    command: "tools/run.py --once --report"
+  income_audit:
+    cadence: weekly
+    command: "tools/run.py --once --recon"
+  fnb_audit:
+    cadence: nightly
+    command: "tools/run.py --once --fnb"
+
+poll_seconds: 3600   # only used by `make watch` - reporting cadence is slow

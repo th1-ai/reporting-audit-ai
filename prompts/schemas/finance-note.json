@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["note"],
+  "properties": {
+    "note": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800,
+      "description": "3-4 sentence plain-prose controller's note, no headers or bullets"
+    }
+  }
+}
