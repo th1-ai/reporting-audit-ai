@@ -40,10 +40,24 @@ def isolated_settings(tmp_path, monkeypatch):
         sandbox = tmp_path / "repo"
         if not sandbox.exists():
             sandbox.mkdir()
-            for name in ("prompts", "knowledge", "fixtures"):
+            for name in ("prompts", "fixtures"):
                 src = REPO_ROOT / name
                 if src.exists():
                     shutil.copytree(src, sandbox / name)
+            # knowledge/ and config/: the SHIPPED state right after `make setup`
+            # (examples materialised), never the hotel's own edited files.
+            for name in ("knowledge", "config"):
+                src = REPO_ROOT / name
+                dst = sandbox / name
+                dst.mkdir(exist_ok=True)
+                if src.exists():
+                    for f in src.iterdir():
+                        if f.is_file() and (".example." in f.name or f.name == "README.md"):
+                            shutil.copy(f, dst / f.name)
+                            if ".example." in f.name:
+                                real = dst / f.name.replace(".example.", ".")
+                                if not real.exists():
+                                    shutil.copy(f, real)
             (sandbox / "data" / "imports").mkdir(parents=True)
         monkeypatch.setenv("AGENT_REPO_ROOT", str(sandbox))
         from core.config import load_settings
